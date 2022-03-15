@@ -17,6 +17,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { HeaderComponent } from './navigation/header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -32,14 +33,15 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     NavigationComponent,
     SidenavListComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FlexLayoutModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FlexLayoutModule,
+        FormsModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
