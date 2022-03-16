@@ -18,6 +18,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import {MatSelectModule} from "@angular/material/select";
+import {StopTrainingComponent} from "./training/current-training/stop-training.component";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatSelectModule} from "@angular/material/select";
     WelcomeComponent,
     HeaderComponent,
     NavigationComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    StopTrainingComponent
   ],
     imports: [
         BrowserModule,
@@ -43,6 +45,7 @@ import {MatSelectModule} from "@angular/material/select";
         MatSelectModule
     ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingComponent]
 })
 export class AppModule { }
