@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import {MatSelectModule} from "@angular/material/select";
 import {StopTrainingComponent} from "./training/current-training/stop-training.component";
+import {AuthService} from "./auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -35,16 +36,17 @@ import {StopTrainingComponent} from "./training/current-training/stop-training.c
     SidenavListComponent,
     StopTrainingComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MaterialModule,
-        FlexLayoutModule,
-        FormsModule,
-        MatSelectModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    MatSelectModule,
+    ReactiveFormsModule
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
