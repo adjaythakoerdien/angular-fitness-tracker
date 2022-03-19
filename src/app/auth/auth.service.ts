@@ -8,7 +8,7 @@ import { AuthData } from './auth-data.model';
 @Injectable()
 export class AuthService {
   authChange = new Subject<boolean>();
-  user: User;
+  private user: User | null | undefined;
 
   constructor(private router: Router) {}
 
