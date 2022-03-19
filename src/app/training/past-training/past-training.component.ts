@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Exercise } from '../exercise.model';
 import { TrainingService } from '../training.service';
 import { MatSort } from '@angular/material/sort';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-past-training',
@@ -25,5 +26,9 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
+  }
+
+  doFilter(filterValue: string): void {
+    this.dataSource.filter = filterValue.trim().toLocaleLowerCase();
   }
 }
