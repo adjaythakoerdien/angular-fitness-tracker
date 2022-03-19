@@ -21,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { TrainingService } from './training/training.service';
     FormsModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatTableModule,
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
