@@ -22,6 +22,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MatTableModule } from '@angular/material/table';
     MatSelectModule,
     ReactiveFormsModule,
     MatTableModule,
+    MatSortModule,
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],

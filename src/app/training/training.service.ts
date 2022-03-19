@@ -26,6 +26,7 @@ export class TrainingService {
   }
 
   completeExercise() {
+    // @ts-ignore
     this.exercises.push({
       ...this.runningExercise,
       date: new Date(),
@@ -36,6 +37,7 @@ export class TrainingService {
   }
 
   cancelExercise(progress: number) {
+    // @ts-ignore
     this.exercises.push({
       ...this.runningExercise,
       duration: this.runningExercise.duration * (progress / 100),
